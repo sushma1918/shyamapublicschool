@@ -205,4 +205,89 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================
+  // 5. Highlights Slider/Carousel Logic
+  // ==========================================
+  const slider = document.getElementById('announcementsSlider');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+  
+  if (slider && slides.length > 0) {
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let autoSlideInterval;
+    
+    const updateSlider = () => {
+      // Move slider
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    };
+    
+    const nextSlide = () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    };
+    
+    const prevSlide = () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    };
+    
+    const startAutoSlide = () => {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    };
+    
+    const stopAutoSlide = () => {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+      }
+    };
+    
+    // Click listeners
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide(); // Reset interval
+      });
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide(); // Reset interval
+      });
+    }
+    
+    // Indicators listeners
+    indicators.forEach(indicator => {
+      indicator.addEventListener('click', (e) => {
+        currentSlide = parseInt(e.target.getAttribute('data-slide'), 10);
+        updateSlider();
+        startAutoSlide(); // Reset interval
+      });
+    });
+    
+    // Start auto slide initially
+    startAutoSlide();
+    
+    // Stop sliding when hovering over the slider
+    const container = document.querySelector('.carousel-container');
+    if (container) {
+      container.addEventListener('mouseenter', stopAutoSlide);
+      container.addEventListener('mouseleave', startAutoSlide);
+    }
+  }
 });
+

@@ -418,7 +418,7 @@ section {
 .hero {
   position: relative;
   padding: 140px 0;
-  background: linear-gradient(rgba(26, 21, 21, 0.5), rgba(26, 21, 21, 0.65)), url('assets/gallery/campus.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(26, 21, 21, 0.5), rgba(26, 21, 21, 0.65)), url('assets/original/school_image_1.jpg') no-repeat center center/cover;
   min-height: 680px;
   display: flex;
   align-items: center;
@@ -1646,3 +1646,99 @@ footer {
     font-size: 4rem;
   }
 }
+
+/* Announcements Slider / Carousel styling */
+.announcements-section {
+  padding: 80px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.carousel-slider {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(140, 14, 42, 0.85);
+  color: var(--bg-white);
+  border: none;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.carousel-control:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.carousel-indicators .indicator.active {
+  background-color: var(--primary-color);
+  width: 24px;
+  border-radius: 5px;
+}
+
