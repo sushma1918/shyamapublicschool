@@ -1467,6 +1467,33 @@ footer {
   box-shadow: 0 15px 30px rgba(37, 211, 102, 0.35);
 }
 
+/* Floating Call Widget */
+.call-widget {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 10px 25px rgba(238, 139, 59, 0.3);
+  z-index: 999;
+  transition: var(--transition-smooth);
+}
+
+.call-widget:hover,
+.call-widget:focus-visible {
+  transform: scale(1.08) rotate(-10deg);
+  box-shadow: 0 15px 30px rgba(31, 122, 224, 0.35);
+  outline: 3px solid rgba(31, 122, 224, 0.24);
+  outline-offset: 4px;
+}
+
 .mobile-only {
   display: none;
 }
@@ -2205,11 +2232,18 @@ footer {
 }
 
 .footer-about-socials a,
-.whatsapp-widget {
+.whatsapp-widget,
+.call-widget {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .whatsapp-widget {
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  color: #fff;
+  background: #25d366;
+}
+
+.call-widget {
   border: 3px solid rgba(255, 255, 255, 0.85);
 }
 
@@ -2896,6 +2930,17 @@ footer::before {
 .whatsapp-widget {
   color: var(--school-ink);
   background: var(--school-honey);
+  border-radius: 50%;
+}
+
+.whatsapp-widget {
+  color: #fff;
+  background: #25d366;
+}
+
+.call-widget {
+  color: #fff;
+  background: #1f7ae0;
   border-radius: 50%;
 }
 
