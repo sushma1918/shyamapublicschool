@@ -3510,3 +3510,26 @@ footer::before {
     gap: clamp(18px, 2vw, 26px);
   }
 }
+
+/* Floating action buttons and long CTA text polish */
+.nav-utils-right .btn-primary {
+  white-space: nowrap;
+}
+
+@media (max-width: 580px) {
+  .call-widget,
+  .whatsapp-widget {
+    width: 54px;
+    height: 54px;
+    bottom: 18px;
+    font-size: 1.55rem;
+  }
+
+  .call-widget {
+    left: 18px;
+  }
+
+  .whatsapp-widget {
+    right: 18px;
+  }
+}
