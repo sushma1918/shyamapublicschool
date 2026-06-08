@@ -3488,3 +3488,25 @@ footer::before {
     display: none;
   }
 }
+
+/* Desktop navbar balance fix */
+@media (min-width: 1025px) {
+  .nav-container {
+    grid-template-columns: max-content auto max-content;
+    justify-content: center;
+    column-gap: clamp(26px, 4vw, 52px);
+  }
+
+  .nav-container > .nav-menu-left {
+    justify-self: end;
+  }
+
+  .nav-utils-right {
+    justify-self: start;
+    justify-content: flex-start;
+  }
+
+  .nav-menu-left {
+    gap: clamp(18px, 2vw, 26px);
+  }
+}
