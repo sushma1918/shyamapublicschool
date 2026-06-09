@@ -78,13 +78,23 @@ img {
 
 /* Top info strip */
 .top-bar {
-  background-color: var(--bg-cream);
-  color: var(--text-dark);
+  background-color: var(--accent-color);
+  color: #000000;
   font-size: 0.85rem;
   padding: 10px 0;
   font-weight: 600;
   letter-spacing: 0.2px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.top-bar a,
+.top-bar span,
+.top-bar i {
+  color: #000000 !important;
+}
+
+.top-bar a:hover {
+  color: var(--bg-white) !important;
 }
 
 .top-bar .container {
@@ -156,33 +166,32 @@ header.scrolled {
 }
 
 .nav-container {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   height: var(--header-height);
 }
 
-/* Navigation Links (Left side in desktop layout) */
+/* Navigation Links (Right side in desktop layout) */
 .nav-menu-left {
   display: flex;
   list-style: none;
-  gap: 28px;
+  gap: clamp(16px, 2.2vw, 32px);
+  margin-left: auto;
+  margin-right: clamp(16px, 2.5vw, 40px);
 }
 
-/* Center Logo Panel */
+/* Left Logo Panel */
 .logo-center {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 2px;
-  max-width: 230px;
-  min-width: 0;
-  padding: 0 12px;
+  gap: 12px;
+  text-align: left;
+  padding: 0;
 }
 
 .logo-center img {
-  height: 44px;
+  height: 68px;
   width: auto;
   transition: var(--transition-smooth);
 }
@@ -191,28 +200,9 @@ header.scrolled {
   transform: scale(1.05) rotate(-1deg);
 }
 
-.logo-center-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  letter-spacing: 0.3px;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
+.logo-center-title,
 .logo-center-subtitle {
-  font-size: 0.58rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  font-weight: 800;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: none;
 }
 
 /* Header Utilities (Right side) */
@@ -3489,25 +3479,12 @@ footer::before {
   }
 }
 
-/* Desktop navbar balance fix */
+/* Desktop navbar flex layout helper */
 @media (min-width: 1025px) {
   .nav-container {
-    grid-template-columns: max-content auto max-content;
-    justify-content: center;
-    column-gap: clamp(26px, 4vw, 52px);
-  }
-
-  .nav-container > .nav-menu-left {
-    justify-self: end;
-  }
-
-  .nav-utils-right {
-    justify-self: start;
-    justify-content: flex-start;
-  }
-
-  .nav-menu-left {
-    gap: clamp(18px, 2vw, 26px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
