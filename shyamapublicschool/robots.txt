@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shyamapublicschool.netlify.app/sitemap.xml
