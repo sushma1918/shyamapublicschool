@@ -3624,3 +3624,9 @@ footer::before {
     right: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none !important;
+  }
+}
