@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shyamapublicschool.netlify.app/sitemap.xml
+Sitemap: https://wisdomwingsedupublicschoolgyanpur.netlify.app/sitemap.xml

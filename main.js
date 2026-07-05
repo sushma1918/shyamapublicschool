@@ -1,5 +1,5 @@
 /**
- * Global JavaScript File for Shyama Public School Website
+ * Global JavaScript File for Wisdom Wingsedu Website
  * Implements mobile menu, counter animation, form validation, gallery filtering, and image lightbox.
  */
 
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalCloseBtn');
   
   if (forms.length > 0 && successModal) {
-    const schoolEmail = 'shyamapublicschool1998@gmail.com';
+    const schoolEmail = 'wisdomwingsedu@gmail.com';
 
     const getFieldLabel = (field) => {
       if (field.id) {
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(field => field.value.trim())
             .map(field => `${getFieldLabel(field)}: ${field.value.trim()}`);
           const body = [
-            `Hello Shyama Public School,`,
+            `Hello Wisdom Wingsedu,`,
             '',
             `Please review this ${formType.toLowerCase()} submitted from the website:`,
             '',

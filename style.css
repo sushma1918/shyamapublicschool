@@ -1,5 +1,5 @@
 /* 
- * Shyama Public School - Earthy Organic & Playful Joyloo-Inspired Revamp Styling
+ * Wisdom Wingsedu - Earthy Organic & Playful Joyloo-Inspired Revamp Styling
  * Styled to match a modern organic educational layout: Outfit & Inter fonts,
  * terracotta orange, forest green, warm cream backgrounds, and deep chocolate brown text.
  */
@@ -3622,5 +3622,11 @@ footer::before {
 
   .whatsapp-widget {
     right: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none !important;
   }
 }
