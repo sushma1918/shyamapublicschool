@@ -1,5 +1,5 @@
 /* 
- * Shyama Public School - Earthy Organic & Playful Joyloo-Inspired Revamp Styling
+ * Wisdom Wings Public School - Earthy Organic & Playful Joyloo-Inspired Revamp Styling
  * Styled to match a modern organic educational layout: Outfit & Inter fonts,
  * terracotta orange, forest green, warm cream backgrounds, and deep chocolate brown text.
  */
@@ -8,25 +8,25 @@
 
 :root {
   /* Joyloo Organic Colors */
-  --primary-color: #FF5C35;       /* Terracotta Orange */
-  --primary-hover: #E04B25;       /* Darker Terracotta Orange */
-  --secondary-color: #0E5E3A;     /* Rich Forest Green */
-  --accent-color: #FAB12F;        /* Sun Yellow */
-  --accent-gold: #FAB12F;         /* Legacy gold alias */
-  --accent-blue: #4D96FF;         /* Sky Blue */
-  --bg-cream: #FAF6F0;            /* Warm Earthy Sand background */
+  --primary-color: #38BDF8;       /* Terracotta Orange */
+  --primary-hover: #0EA5E9;       /* Darker Terracotta Orange */
+  --secondary-color: #0284C7;     /* Rich Forest Green */
+  --accent-color: #38BDF8;        /* Sun Yellow */
+  --accent-gold: #0EA5E9;         /* Legacy gold alias */
+  --accent-blue: #38BDF8;         /* Sky Blue */
+  --bg-cream: #F1F5F9;            /* Warm Earthy Sand background */
   --bg-white: #ffffff;
-  --text-dark: #2E1A17;           /* Deep Chocolate Brown for headers */
-  --text-body: #4A3E3C;           /* Warm dark brown-gray for readability */
-  --text-light: #7E6E6C;          /* Muted earthy gray for secondary text */
-  --border-color: #F1E6DF;        /* Soft warm sand border */
-  --bg-dark-charcoal: #2E1A17;    /* Deep Chocolate Brown for footers */
+  --text-dark: #0F172A;           /* Deep Chocolate Brown for headers */
+  --text-body: #1E293B;           /* Warm dark brown-gray for readability */
+  --text-light: #475569;          /* Muted earthy gray for secondary text */
+  --border-color: #E2E8F0;        /* Soft warm sand border */
+  --bg-dark-charcoal: #0F172A;    /* Deep Chocolate Brown for footers */
   
   /* Modern Shadows */
-  --shadow-sm: 0 4px 12px rgba(46, 26, 23, 0.02);
-  --shadow-md: 0 12px 24px rgba(46, 26, 23, 0.04);
-  --shadow-lg: 0 24px 48px rgba(46, 26, 23, 0.06);
-  --shadow-premium: 0 35px 70px -15px rgba(46, 26, 23, 0.1);
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.02);
+  --shadow-md: 0 12px 24px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 24px 48px rgba(15, 23, 42, 0.06);
+  --shadow-premium: 0 35px 70px -15px rgba(15, 23, 42, 0.1);
   
   /* Dimensions & Settings */
   --max-width: 1200px;
@@ -78,8 +78,8 @@ img {
 
 /* Top info strip */
 .top-bar {
-  background-color: var(--accent-color);
-  color: #000000;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
   font-size: 0.85rem;
   padding: 10px 0;
   font-weight: 600;
@@ -90,11 +90,11 @@ img {
 .top-bar a,
 .top-bar span,
 .top-bar i {
-  color: #000000 !important;
+  color: var(--text-dark) !important;
 }
 
 .top-bar a:hover {
-  color: var(--bg-white) !important;
+  color: var(--primary-color) !important;
 }
 
 .top-bar .container {
@@ -132,11 +132,20 @@ img {
 .top-bar-socials a {
   opacity: 0.85;
   color: var(--text-dark);
+  background-color: var(--border-color);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition-smooth);
 }
 
 .top-bar-socials a:hover {
-  color: var(--primary-color);
-  transform: translateY(-1px);
+  color: var(--bg-white) !important;
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
   opacity: 1;
 }
 
@@ -342,7 +351,7 @@ header.scrolled {
 
 /* Page Banner */
 .page-banner {
-  background: linear-gradient(rgba(46, 26, 23, 0.5), rgba(46, 26, 23, 0.7)), url('assets/original/school_image_1.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(46, 26, 23, 0.5), rgba(46, 26, 23, 0.7)), url('../original/school_image_1.jpg') no-repeat center center/cover;
   color: var(--bg-cream);
   padding: 100px 0;
   text-align: center;
@@ -443,7 +452,7 @@ section {
 .hero {
   position: relative;
   padding: 130px 0;
-  background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(250, 246, 240, 0.98)), url('assets/original/school_image_1.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(250, 246, 240, 0.98)), url('../original/school_image_1.jpg') no-repeat center center/cover;
   min-height: 700px;
   display: flex;
   align-items: center;
@@ -1957,7 +1966,7 @@ button {
   isolation: isolate;
   background:
     linear-gradient(110deg, rgba(23, 32, 51, 0.76), rgba(30, 58, 95, 0.36) 48%, rgba(143, 38, 58, 0.42)),
-    url('assets/original/school_image_1.jpg') no-repeat center center/cover;
+    url('../original/school_image_1.jpg') no-repeat center center/cover;
   color: #fff;
   text-align: left;
 }
@@ -2147,7 +2156,7 @@ button {
 .cta-banner {
   background:
     linear-gradient(135deg, rgba(23, 32, 51, 0.96), rgba(30, 58, 95, 0.9) 55%, rgba(143, 38, 58, 0.9)),
-    url('assets/original/school_image_1.jpg') no-repeat center center/cover;
+    url('../original/school_image_1.jpg') no-repeat center center/cover;
   background-blend-mode: multiply;
   box-shadow: var(--premium-shadow-strong);
 }
@@ -2521,7 +2530,7 @@ header.scrolled {
   background:
     radial-gradient(circle at 78% 28%, rgba(244, 181, 72, 0.92) 0 12rem, transparent 12.2rem),
     linear-gradient(100deg, rgba(255, 248, 236, 0.98) 0%, rgba(255, 248, 236, 0.94) 47%, rgba(255, 248, 236, 0.3) 74%),
-    url('assets/original/school_image_1.jpg') no-repeat right center/cover;
+    url('../original/school_image_1.jpg') no-repeat right center/cover;
 }
 
 .hero::before {
@@ -2772,7 +2781,7 @@ header.scrolled {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(36, 27, 21, 0.92), rgba(36, 27, 21, 0.78)),
-    url('assets/original/dsc_01432.jpg') no-repeat center center/cover;
+    url('../original/dsc_01432.jpg') no-repeat center center/cover;
   background-blend-mode: multiply;
 }
 
@@ -2844,7 +2853,7 @@ header.scrolled {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(36, 27, 21, 0.94), rgba(36, 27, 21, 0.74)),
-    url('assets/original/DSC01743-scaled.jpg') no-repeat center center/cover;
+    url('../original/DSC01743-scaled.jpg') no-repeat center center/cover;
   background-blend-mode: multiply;
 }
 
@@ -2865,7 +2874,7 @@ header.scrolled {
   border-bottom: 0;
   background:
     linear-gradient(90deg, rgba(36, 27, 21, 0.9), rgba(36, 27, 21, 0.46)),
-    url('assets/original/DSC01743-scaled.jpg') no-repeat center center/cover;
+    url('../original/DSC01743-scaled.jpg') no-repeat center center/cover;
 }
 
 .page-banner h1,
@@ -2952,7 +2961,7 @@ footer::before {
     min-height: 650px;
     background:
       linear-gradient(90deg, rgba(255, 248, 236, 0.98), rgba(255, 248, 236, 0.82)),
-      url('assets/original/DSC01743-scaled.jpg') no-repeat center center/cover;
+      url('../original/DSC01743-scaled.jpg') no-repeat center center/cover;
   }
 
   .nav-menu-left.mobile-open {
@@ -3024,14 +3033,14 @@ footer::before {
   background:
     radial-gradient(circle at 78% 28%, rgba(244, 181, 72, 0.82) 0 11rem, transparent 11.2rem),
     linear-gradient(100deg, rgba(255, 248, 236, 0.98) 0%, rgba(255, 248, 236, 0.94) 48%, rgba(255, 248, 236, 0.3) 74%),
-    url('assets/original/DSC01743-scaled.jpg') no-repeat right center/cover;
+    url('../original/DSC01743-scaled.jpg') no-repeat right center/cover;
 }
 
 @media (max-width: 1024px) {
   .hero {
     background:
       linear-gradient(90deg, rgba(255, 248, 236, 0.98), rgba(255, 248, 236, 0.82)),
-      url('assets/original/DSC01743-scaled.jpg') no-repeat center center/cover;
+      url('../original/DSC01743-scaled.jpg') no-repeat center center/cover;
   }
 }
 
@@ -3091,7 +3100,7 @@ footer::before {
 .academics-box-card.accent-card {
   background:
     linear-gradient(135deg, rgba(36, 27, 21, 0.96), rgba(58, 42, 30, 0.94)),
-    url('assets/original/dsc_01432.jpg') center/cover;
+    url('../original/dsc_01432.jpg') center/cover;
   background-blend-mode: multiply;
   color: #fff;
 }
@@ -3235,7 +3244,7 @@ footer::before {
   background:
     radial-gradient(circle at 82% 25%, rgba(244, 181, 72, 0.95) 0 13rem, transparent 13.2rem),
     linear-gradient(105deg, #fff8ec 0%, #fff8ec 50%, rgba(255, 248, 236, 0.82) 68%, rgba(255, 248, 236, 0.42) 100%),
-    url('assets/original/DSC01743-scaled.jpg') no-repeat right center/cover;
+    url('../original/DSC01743-scaled.jpg') no-repeat right center/cover;
 }
 
 .hero .container {
