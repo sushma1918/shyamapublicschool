@@ -1,5 +1,5 @@
 /**
- * Global JavaScript File for Wisdom Wingsedu Website
+ * Global JavaScript File for Wisdom Wingsedu School Website
  * Implements mobile menu, counter animation, form validation, gallery filtering, and image lightbox.
  */
 
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(field => field.value.trim())
             .map(field => `${getFieldLabel(field)}: ${field.value.trim()}`);
           const body = [
-            `Hello Wisdom Wingsedu,`,
+            `Hello Wisdom Wingsedu School,`,
             '',
             `Please review this ${formType.toLowerCase()} submitted from the website:`,
             '',
